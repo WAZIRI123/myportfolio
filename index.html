@@ -13,55 +13,34 @@
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-  <!--- header -->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="nav_logo">Waziri Ally</a>
-      <div class="nav_menu" id="nav-menu">
-        <ul class="nav_list grid">
-          <li class="nav_item">
-            <a href="#home" class="nav_link">
-              <i class="uil uil-home nav_icon"></i> home
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#Skills" class="nav_link">
-              <i class="uil uil-file nav_icon"></i>Skills
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#Services" class="nav_link">
-              <i class="uil uil-briefcase-alt nav_icon"></i>Services
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#Portifolio" class="nav_link">
-              <i class="uil uil-scenery nav_icon"></i>Portifolio
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#Contact" class="nav_link">
-              <i class="uil uil-message nav_icon"></i>Contact
-            </a>
-          </li>
+   <!--==================== header & nav start ====================-->
+   <section class="header">
+     <div class="header-container">
+       <div class="logo"> <p>Waziri Ally</p></div>
+       <div class="nav">
+        <ul class="nav-wrapper">
+          <li class='nav-link'><a href="#" class="link active">Home</a></li>
+          <li class='nav-link'><a href="#" class="link">About</a></li>
+          <li class='nav-link'><a href="#" class="link">Contact</a></li>
+          <li class='nav-link'><a href="#" class="link">Services</a></li>
+          <li class='nav-link'><a href="#" class="link">Portifolio</a></li>
+          <li class='nav-link'><a href="#" class="link">ContactMe</a></li>
         </ul>
-        <i class="uil uil-times-circle nav_close nav_icon" id="nav-close"></i>
-      </div>
-      <div class="nav_btns">
-        <div class="nav_toggle" id="nav-toggle">
-          <i class="uil uil-apps nav_icon"></i>
-        </div>
-      </div>
-    </nav>
-  </header>
+        <div class="dark-icon"><i class="uil uil-moon"></i></div>
+        <div class="toggle-z"><i class="uil uil-align-justify toggle-bar"></i></div>
+       </div>
+    </div>
+   </section>
+    <!--==================== header & nav end====================-->
+
  <!--==================== main ====================-->
   <div class="main">
 
   </div>
   <!--==================== home ====================-->
   <section class="home section" id="home">
-    <div class="home_container container grid">
-      <div class="home_content grid">
+    <div class="home_container container ">
+      <div class="home_content">
         <div class="home_social">
           <a href=""  target="_blank" class="home_social-icon">
             <i class="uil uil-linkedin-alt"></i>
@@ -91,13 +70,15 @@
         </svg>
         </div>
         <div class="home_data">
-          <h1 class="home_title">Hi, I'am Waziri Ally Amiri</h1>
+          <h1 class="home_title">Hi, I'am Waziri</h1>
           <h3 class="home_subtitle">Frontend developer</h3>
           <p class="home_description">
             High level experience in web design and knowledge, producing quality work.</p>
-            <a href="" class="button button--flex">
+            <div class="contactbtn">
+            <a href="" class="button button--flex btn-contact">
               Contact Me<i class="uil uil-message button-icon"></i>
             </a>
+          </div>
         </div>
       </div>
         <div class="home_scroll">
@@ -750,7 +731,34 @@
 </div>
 </div>
 </section>
-<!--==================== Portifolio Section end====================-->
+<!--==================== contact Section end====================-->
+<!--==================== footer Section start====================-->
+<section class="footer-container">
+  <div class="footer-items">
+    <div class="logo">
+      <img src="asset/img/about.jpg" alt="">
+    </div>
+  <div class="social-media">
+    <h3>Social Media</h3>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+    <a href="https://github.com/WAZIRI123">github</a>
+  </div>
+  <div class="links">
+  <h3>links</h3>
+  <a href="#">Home</a>
+  <a href="#">contact</a>
+  <a href="#">portifolio</a>
+  <a href="#">Skills and experience</a>
+</div>
+</div>
+<div class="creadit">
+  <p>created by <span>Waziri</span></p>
+  <p>all right reserved&#169; 2022</p>
+</div>
+</section>
+<!--==================== footer Section end====================-->
 <!--- links for main js-->
     <script src="asset/js/main.js"></script>
       <!--- links for swiper css-->

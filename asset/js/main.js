@@ -1,14 +1,21 @@
 const navMenu=document.getElementById('nav-menu'),
       navToggle=document.getElementById('nav-toggle'),
       navClose=document.getElementById('nav-close'),
-      navlink=document.querySelectorAll('.nav_link')  
-  
+      active=document.querySelectorAll('.nav-link>a'),
+      togglebar=document.querySelector('.toggle-bar'),
+      navwrapper=document.querySelector('.nav-wrapper')
+      //--==================== togglebar start ====================--//
+      togglebar.addEventListener('click',()=>{
+        navwrapper.classList.toggle('active')
+      })
+        //--==================== togglebar end ====================--//
       //check if constants existes
-      if (navToggle) {
-          navToggle.addEventListener('click',()=>{
-              navMenu.classList.add('show-menu')//show menu
-          }) 
-      }
+      active.forEach((btn)=>{
+       btn.addEventListener('click',()=>{
+         document.querySelector('.link.active').classList.remove('active')
+          btn.classList.add('active')
+       })
+      })
       //hiden the menu
       if(navClose){
           navClose.addEventListener('click',()=>{

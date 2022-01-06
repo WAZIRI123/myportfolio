@@ -7,21 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="p"></p>
-    <script>
-
-        let obj={
-            name:'waziri',
-            school:'mocu',
-            work:'kcmc'
+  <p id="p"></p>
+<script>
+  let numbers={};
+numbers[Symbol.iterator]=function(){
+  let n=0;
+  done=false;
+  return{
+    next(){
+      n+=10
+      if (n==100) 
+        {done:true}
+      
+        return {value:n,done:done}
     }
-    Object.defineProperty(obj,'waziri',{
-               set:function (value) {
-                   return this.work=value;
-               }
-        });
-        
-        document.getElementById('p').innerHTML=obj.waziri='halima';
-    </script>
+  };
+}
+let text='';
+for (const iterator of numbers) {
+  text +=iterator+"br"
+ 
+}
+
+document.getElementById('p').innerHTML=text;
+
+</script>
+      
 </body>
 </html>
