@@ -9,27 +9,22 @@
 <body>
   <p id="p"></p>
 <script>
-  let numbers={};
-numbers[Symbol.iterator]=function(){
-  let n=0;
-  done=false;
-  return{
-    next(){
-      n+=10
-      if (n==100) 
-        {done:true}
-      
-        return {value:n,done:done}
-    }
-  };
-}
-let text='';
-for (const iterator of numbers) {
-  text +=iterator+"br"
- 
+let person={
+lname:'waziri',
+fname:'amiri',
+
+  set fullname(value){
+   const parts=value.split(' ')
+   this.fname=parts[0]
+   this.lname=parts[1]
+  },
+  get fullname(){
+ `${this.fname} ${this.lname} `
+  }
+
 }
 
-document.getElementById('p').innerHTML=text;
+person.fullname='saumu ally '
 
 </script>
       

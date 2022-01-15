@@ -9,97 +9,110 @@ const navMenu=document.getElementById('nav-menu'),
         navwrapper.classList.toggle('active')
       })
         //--==================== togglebar end ====================--//
-      //check if constants existes
-      active.forEach((btn)=>{
-       btn.addEventListener('click',()=>{
-         document.querySelector('.link.active').classList.remove('active')
-          btn.classList.add('active')
-       })
-      })
-      //hiden the menu
-      if(navClose){
-          navClose.addEventListener('click',()=>{
-              navMenu.classList.remove('show-menu')
-          })
+        //--==================== navlinkscroll on click start ====================--//
+        let navlinkscr=document.querySelectorAll('nav-link')
+        navlinkscr.forEach(()=>{
+          navlinkscr.addEventListener(('click',()=>{
+            
+          }))
+        })
+        //--==================== navlinkscroll on click end ====================--//
+    /*--====================portifolio section js start ====================--*/
+     let container=document.querySelector('.portifolio-container')
+     let totalwidth=0;
+   const controlitem=document.querySelector('.control')
+     const itemsdiv=container.children,
+     widthcontainer=container.offsetWidth;
+    let items=0;
+  let margin=30;
+  let jumpslipe=0;
+     let responsive=[
+      {breakpoint:{width:200,items:1}},
+      {breakpoint :{width:300,items:2}},
+      {breakpoint : {width:768,items:3}},
+      {breakpoint : {width:900,items:4}}
+     ];
+     function load() {
+      for (let i = 0; i<responsive.length; i++) {
+        if (window.innerWidth>responsive[i].breakpoint.width) {
+           items=responsive[i].breakpoint.items
+        }
       }
+      start();
+     
+   }
+   let totalitems=0
+    function start(){
+      let itemwidth=(widthcontainer/items);
+      for (let i = 0; i <itemsdiv.length; i++) {
+       itemsdiv[i].style.width=(itemwidth-margin) +'px'
+       itemsdiv[i].style.margin=margin/2 +'px'
+       totalwidth+=(widthcontainer/items)
+       totalitems++
+      }
+      container.style.width=totalwidth +'px';
+      control()
+     }
+     window.onload =load();
+     
+     function control(){
+      let ul =document.createElement('ul')
+      ul.classList.add('controlcontainer')
+      controlitem.appendChild(ul);
+      ///number of slides
+       let slides=Math.ceil(totalitems/items)
+       for (let i = 1; i <=slides; i++) {
+        let li=document.createElement('li')
+        let Textnode=document.createTextNode(i);
+        li.id=i
+        li.classList.add('controli')
+        if (i==1) {
+          li.classList.add('active')
+        }
+        li.setAttribute('onclick',"slide(this)")
+        li.appendChild(Textnode);
+        ul.appendChild(li);
+       } 
+     }
+     function slide(ele){
+      const controls=document.querySelector('.control')
+      const ul=controls.children
+      const li=ul[0].children
+      let active=0;
+      for (let i = 0; i < li.length; i++) {
+        if(li[i].className=='controli active'){
+          active=i
+          li[i].className='controli'
+          console.log(active)
+        }
+      }
+        ele.className=('controli active')
+        let numb=(ele.id-1)-active
+        jumpslipe+=widthcontainer*numb
+        container.style.marginLeft=-jumpslipe+'px'
+     }
 
-      function linkAction(){
-        const navMenu =document.getElementById('nav-menu')
-        //when we click on each nav_link, we removr the show-menu class
-        navMenu.classList.remove('show-menu')
-    }  
-    navlink.forEach(g=>g.addEventListener('click',linkAction)) 
-    const skills_content=document.querySelectorAll('.skills_content');
-
-    for (let i = 0; i < skills_content.length; i++){
-        const arrow=skills_content[i].querySelector('.Skills_arrow');
-        const list=skills_content[i].querySelector('.skills_list');
-        arrow.addEventListener('click',()=>{
-            arrow.classList.toggle('skills_close');
-            if (arrow.classList.contains('skills_close')) {
-                list.classList.add('skills_close');
-                list.classList.remove('skills_open');
-            }else{
-                list.classList.add('skills_open')
-                list.classList.remove('skills_close')
-            }
-        })
-    }
-    const workTab=document.getElementById('work_tab'),
-    workTabbtn=document.getElementById('work');
-    workTab.addEventListener('click',()=>{
-        workTabbtn.classList.toggle('inactive');
-        workTab.classList.toggle('tabcolor');
-    });
-    const educTab=document.getElementById('educ_tab'),
-    educTabbtn=document.getElementById('education');
-    educTab.addEventListener('click',()=>{
-        educTabbtn.classList.toggle('inactive');
-        educTab.classList.toggle('tabcolor');
-    });
-
-    /*--==================== services js ====================--*/
-    let morebtn=document.querySelectorAll('.more')
-    let moreCard=document.querySelectorAll('.service-container-more')
-    let cancelbtn=document.querySelectorAll('.cancelbtn')
-    for (let index = 0; index < morebtn.length; index++) {
-        morebtn[index].addEventListener('click',()=>{
-                moreCard[index].classList.add('active')
-                cancelbtn[index].addEventListener('click',()=>{
-                    moreCard[index].classList.remove('active')
-                })
-        })
-    }
-  
-   
-    /*--==================== services js end ====================--*/
-     /*--====================portifolio section js start ====================--*/
-    let prev=document.querySelector('.arrow-icon-left');
-    let carousel=document.querySelector('.work-card-container');
-    let next=document.querySelector('.arrow-icon-right');
-    let content=document.querySelector('.work-card');
-   const gap = 16;
-
-   next.addEventListener("click", e => {
-    carousel.scrollBy(width + gap, 0);
-    if (carousel.scrollWidth !== 0) {
-      prev.style.display = "grid";
-    }
-    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth){
-      next.style.display = "none";
-    }
-  });
-  prev.addEventListener("click", e => {
-    carousel.scrollBy(-(width + gap), 0);
-    if (carousel.scrollLeft - width - gap <= 0) {
-      prev.style.display = "none";
-    }
-    if (!carousel.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-      next.style.display = "grid";
-    }
-  });
-  
-  let width = content.clientWidth;
-  window.addEventListener("resize", e => (width = content.clientWidth));
-  
     /*--====================portifolio section js end ====================--*/
+     /*--====================smooth scroll section js end ====================--*/
+     const navlink=document.querySelectorAll('.nav-link>a')
+     navlink.forEach((navlinks)=>{
+      navlinks.addEventListener('click',(e)=>{
+        e.preventDefault()
+       let href=navlinks.getAttribute('href')
+       document.querySelector(href).scrollIntoView({behavior: "smooth"});
+       })
+     })
+     
+      /*--====================smoothh scrol section js end ====================--*/
+
+       /*--====================blue color of navlink section js start ====================--*/
+  
+      active.forEach((btn)=>{
+        btn.addEventListener('click',()=>{
+          document.querySelector('.link.active').classList.remove('active')
+           btn.classList.add('active')
+        })
+       })
+     /*--====================blue color of navlink section js start ====================--*/
+  
+      
