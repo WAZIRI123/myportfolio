@@ -9,15 +9,18 @@
 <body>
   <div id="p"></div>
   <script>
-    const person={
-      name:'waziri',
-      fname:'amiri',
-      lname:'recho'
-    }
-  Object.defineProperty(person,'fullname',{
-    get:function(){ return `${this.name} ${this.fname}`}
-  });
-  document.querySelector('#p').innerHTML=person.fullname
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: []
+}
+
+language.current = 'EN';
+console.log(language.log); // ['EN']
+
+language.current = 'FA';
+console.log(language.log); // ['EN', 'FA']
   </script>
 </body>
 </html>

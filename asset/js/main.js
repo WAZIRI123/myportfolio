@@ -83,7 +83,6 @@ const navMenu=document.getElementById('nav-menu'),
         if(li[i].className=='controli active'){
           active=i
           li[i].className='controli'
-          console.log(active)
         }
       }
         ele.className=('controli active')
@@ -113,6 +112,35 @@ const navMenu=document.getElementById('nav-menu'),
            btn.classList.add('active')
         })
        })
+    
      /*--====================blue color of navlink section js start ====================--*/
+       /*--====================Contact form start ====================--*/
+       var form = document.getElementById("my-form");
+    
+       async function handleSubmit(event) {
+         event.preventDefault();
+         var status = document.getElementById("my-form-status");
+         var data = new FormData(event.target);
+         if (status.classList.contains('success')) {
+           status.classList.remove('success');
+         }
+         fetch(event.target.action, {
+           method: form.method,
+           body: data,
+           headers: {
+               'Accept': 'application/json'
+           }
+         }).then(response => {
+           status.classList.add('success');
+           status.innerHTML = "Thanks for your submission!";
+           form.reset()
+         }).catch(error => {
+           status.innerHTML = "Oops! There was a problem submitting your form"
+         });
+       }
+       form.addEventListener("submit", handleSubmit)
+      
+        /*--====================Contact form end ====================--*/
+        
   
       

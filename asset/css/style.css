@@ -594,16 +594,54 @@ text-align: center;
   overflow-x: hidden;
 }
 .portifolio-container>.item{
-background-color: grey;
 display: flex;
-color: #fff;
-height: 50px;
+height:auto;
+width:20%;
+row-gap: 1rem;
 text-align: center;
+flex-direction: column;
 padding: 2rem;
+}
+.item>.img{
+  width: 100%;
+  height: 40%;
+  padding-left: 0.8rem;
+}
+.item>h3{
+  text-align: start;
+  padding-top: 1rem;
+  width: 100%;
+  height: 10%;
+}
+.item>p{
+  text-align: justify;
+  width:100%;
+}
+.item>.img>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.button-port{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding:clamp(0.2rem,0.9rem,1rem);
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  width: 10rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.button-port >i{
+  font-size: 1.2rem;
 }
 .portifolio-container{
   display: flex;
-  
+  width: 100%;
+  box-sizing: border-box;
   }
   .controlcontainer{
     display: flex;
@@ -710,6 +748,32 @@ margin-bottom: 5vh;
   .subutton>input:hover{
     background-color: var(--first-color-alt) !important;
     cursor: pointer;
+  }
+  #my-form-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+  }
+  #my-form-status.success{
+    animation: status  4s ease forwards;
+  }
+  @keyframes status{
+    0%{
+      opacity: 1;
+      pointer-events: all;
+      padding: 1rem;
+    }
+    90%{
+      opacity: 1;
+      pointer-events: all;
+      padding: 1rem;
+    }
+    100%{
+      opacity: 0;
+      pointer-events: none;
+      padding: 0;
+    }
   }
 /*--====================contact Me section end ====================--*/
 /*--====================footer section start ====================--*/
