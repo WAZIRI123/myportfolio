@@ -141,6 +141,55 @@ const navMenu=document.getElementById('nav-menu'),
        form.addEventListener("submit", handleSubmit)
       
         /*--====================Contact form end ====================--*/
+        /*--======================skill start ====================-==-*/
+        let skillcont=document.querySelectorAll('.skills_content')
+        let SkillsArrow=document.querySelectorAll('.Skills_arrow')
+        let skillslist=document.querySelectorAll('.skills_list')
+        skillcont.forEach(element => {
+          element.addEventListener('click',()=>{
+            skillcont.forEach(content => {
+              content.className="skills_content skills_close"
+              content.addEventListener('click',()=>{
+                if ( content.className==="skills_content skills_close") {
+                  content.className="skills_content skills_open"
+                }else{
+                  content.className="skills_content skills_close"
+                }
+                
+              })
+            });
+          })
+        });
+        
+        /*-==-====================skill end =======================--=*/
+             /*=========--======================services  start ====================-==-*/
+             const morebtn=document.querySelectorAll('.services-desc') //cancelbtn
+             const cancelbtn=document.querySelectorAll('.cancelbtn')
+             morebtn.forEach(moreb => {
+               moreb.addEventListener('click',()=>{
+                moreb.parentElement.classList.add('popup')
+                cancelbtn.forEach(cancelbt => {
+                  cancelbt.addEventListener('click',()=>{
+                    moreb.parentElement.classList.remove('popup')
+                  })
+                });
+               })
+             });
+             /*-===========-====================services  end =======================--=*/
+                /*=========--======================services  start ====================-==-*/
+                const education_qualification=document.querySelector('.education_qualification')
+                const educ_tab=document.querySelector('.educ_tab')
+                const work_tab=document.querySelector('.work_tab')
+                const work_qualification=document.querySelector('.work_qualification')
+                educ_tab.addEventListener('click',()=>{
+                  education_qualification.classList.toggle('inactive')
+                  work_qualification.classList.add('inactive')
+                })
+                work_tab.addEventListener('click',()=>{
+                  work_qualification.classList.toggle('inactive')
+                  education_qualification.classList.add('inactive')
+                })
+                /*-===========-====================services  end =======================--=*/
         
   
       

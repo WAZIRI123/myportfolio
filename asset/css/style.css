@@ -310,6 +310,10 @@ text-align: center;
 .skills_icon {
   margin-right: var(--mb-0-75);
 }
+.active-skill{
+  transform: rotate(25deg) !important;
+}
+
 .skills_subtitle {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
@@ -391,14 +395,15 @@ text-align: center;
 .skills_photoshop {
   width: 90%;
 }
-.skills_close.skills_list {
+.skills_close .skills_list {
   height: 0;
   overflow: hidden;
 }
-.skills_open.skills_list {
+.skills_open .skills_list {
   height: max-content;
+  margin-bottom: 1rem;
 }
-.skills_close.Skills_arrow {
+.skills_close .Skills_arrow {
   transform: rotate(-180deg);
 }
 /*--============================ ======================  *--==================== *--==================== Qualification ====================--*/
@@ -552,7 +557,7 @@ text-align: center;
   flex-wrap: wrap;
   z-index: 999;
 }
-.service-container-more.active {
+.popup .service-container-more{
   display: flex;
 }
 
