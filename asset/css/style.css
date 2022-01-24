@@ -189,11 +189,18 @@ img {
   transition: transform 0.2s ease-in;
   display: none;
 }
+.upbtn span{
+  color: #dfe4ea;
+}
 .upbtn.active{
-  display: flex;
+  display: block;
+  z-index: 9999;
+}
+.upbtn.active:hover{
+  cursor: pointer;
 }
 .upbtn:hover{
- cursor: pointer;
+ cursor: pointer !important;
  transform: translateY(2px);
 }
 /*--==================== Home ====================--*/

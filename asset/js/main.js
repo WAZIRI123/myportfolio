@@ -237,14 +237,24 @@ const navMenu=document.getElementById('nav-menu'),
    
    /*=========--======================nav active class as scroll  edn ====================-================-===-*/
     /*-===========-==================== scroll-up-arrow start ======================================-==--=*/
-    const upbtn=document.querySelector('upbtn')
-    let homelin=document.querySelector('.nav-link>a')
+    const upbtn=document.querySelector('.upbtn')
+    let homelin=document.querySelector('.about')
+    let actualho=document.querySelector('.home')
+    let homecroll=document.querySelector('.home_scroll')
     window.addEventListener('scroll',()=>{
-      homescrol=
-      if () {
-        
+      homescrol=homelin.offsetTop
+      homeheight=homelin.clientHeight
+      if ((homescrol-homeheight/4)<=pageYOffset) {
+       upbtn.classList.add('active')
+      }
+      else{
+        upbtn.classList.remove('active')
       }
     })
+    upbtn.addEventListener('click',()=>{
+      window.location=actualho
+    })
+   
    /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
   
   
