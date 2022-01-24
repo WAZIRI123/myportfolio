@@ -60,6 +60,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: 1rem;
 }
 body {
   font-family: var(--body-font);
@@ -118,9 +119,19 @@ img {
 /*--==================== navbar header ====================--*/
 .header-container{
   display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: space-between;
+  width: 100%;
   align-items: center;
-  margin:1rem 8rem;
+  margin:auto auto;
+  z-index: 999;
+  padding: 1rem;
+  align-items: center;
+}
+.nav{
+  margin-right: 8rem;
 }
 
 .logo{
@@ -138,7 +149,7 @@ img {
 }
 .nav-link>a{
   font-weight:var(--font-semi-bold);
-  color: var(--text-color);
+  color: #dfe4ea;
 }
 .active{
   color:var(--first-color-alt) !important;
@@ -164,7 +175,27 @@ img {
   cursor: pointer;
 }
 /*--==================== navbar header end ====================--*/
-
+.upbtn{
+  width: 50px;
+  height:50px;
+  background-color: var(--first-color);
+  position: fixed;
+  border-radius: 5px;
+  right: 1rem;
+  bottom: 1rem;
+  color: #dfe4ea;
+  text-align: center;
+  font-size: 2rem;
+  transition: transform 0.2s ease-in;
+  display: none;
+}
+.upbtn.active{
+  display: flex;
+}
+.upbtn:hover{
+ cursor: pointer;
+ transform: translateY(2px);
+}
 /*--==================== Home ====================--*/
 .home_content{
   display: grid;

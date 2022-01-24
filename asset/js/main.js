@@ -176,20 +176,79 @@ const navMenu=document.getElementById('nav-menu'),
                })
              });
              /*-===========-====================services  end =======================--=*/
-                /*=========--======================services  start ====================-==-*/
-                const education_qualification=document.querySelector('.education_qualification')
-                const educ_tab=document.querySelector('.educ_tab')
-                const work_tab=document.querySelector('.work_tab')
-                const work_qualification=document.querySelector('.work_qualification')
-                educ_tab.addEventListener('click',()=>{
-                  education_qualification.classList.toggle('inactive')
-                  work_qualification.classList.add('inactive')
-                })
-                work_tab.addEventListener('click',()=>{
-                  work_qualification.classList.toggle('inactive')
-                  education_qualification.classList.add('inactive')
-                })
-                /*-===========-====================services  end =======================--=*/
+   /*=========--======================education and work experience  start ====================-==-*/
+    const education_qualification=document.querySelector('.education_qualification')
+    const educ_tab=document.querySelector('.educ_tab')
+    const work_tab=document.querySelector('.work_tab')
+    const work_qualification=document.querySelector('.work_qualification')
+     educ_tab.addEventListener('click',()=>{
+      education_qualification.classList.toggle('inactive')
+       work_qualification.classList.add('inactive')
+    })
+     work_tab.addEventListener('click',()=>{
+      work_qualification.classList.toggle('inactive')
+      education_qualification.classList.add('inactive')
+     })
+      /*-===========-====================education and work experience  end =======================--=*/
+    /*-===========-====================showep nav bar when scroll up  start =======================--=*/
+    const headercontainer=document.querySelector('.header-container')
+    let newvalue= 0;
+    let oldvalue= 0;
+   window.addEventListener('scroll',(e)=>{
+     newvalue=window.pageYOffset;
+     if ( oldvalue < newvalue) {
+       headercontainer.style.position="relative"
+     } 
+     else if(newvalue===0){
+      headercontainer.style.position="relative"
+      headercontainer.style.background="red"
+     }
+     else if(oldvalue > newvalue){
+      headercontainer.style.position="fixed"
+      headercontainer.style.background="hsl(250, 69%, 61%)"
+     }
+     console.log(newvalue)
+     console.log(oldvalue)
+     oldvalue=newvalue;
+   });
+   
+   /*=========--======================showep nav bar when scroll up  edn ====================-==-*/
+    /*-===========-====================nav active class as scroll start ======================================-==--=*/
+    const section=document.querySelectorAll('section')
+    let activelin=document.querySelectorAll('.nav-link>a')
+    window.addEventListener('scroll',()=>{
+      let current=''
+    section.forEach(sect => {
+      let secscroll=sect.offsetTop
+      let secheight=sect.clientHeight
+      if ((secscroll-secheight/4)<=pageYOffset) {
+         current=sect.getAttribute('id')
+      }
+      activelin.forEach(activel => {
+        activel.classList.remove('active')
+        if (activel.classList.contains(current)) {
+          activel.classList.add('active')
+        }
+      });
+    
+    });
+     
+    })
+   
+   /*=========--======================nav active class as scroll  edn ====================-================-===-*/
+    /*-===========-==================== scroll-up-arrow start ======================================-==--=*/
+    const upbtn=document.querySelector('upbtn')
+    let homelin=document.querySelector('.nav-link>a')
+    window.addEventListener('scroll',()=>{
+      homescrol=
+      if () {
         
+      }
+    })
+   /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
+  
+  
+  
+               
   
       

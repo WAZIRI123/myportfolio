@@ -9,23 +9,13 @@
 <body>
   <p id="p"></p>
 <script>
-let person={
-lname:'waziri',
-fname:'amiri',
-
-  set fullname(value){
-   const parts=value.split(' ')
-   this.fname=parts[0]
-   this.lname=parts[1]
-  },
-  get fullname(){
- `${this.fname} ${this.lname} `
-  }
-
+let a= 4
+function byreference(a){
+  a=5;
+  console.log(a)
 }
-
-person.fullname='saumu ally '
-
+byreference(a);
+console.log(a)
 </script>
       
 </body>

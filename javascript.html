@@ -10,16 +10,21 @@
 
 <script>
 // Define an object
-function Construct (a,b){
-this.name=a
-this.school=b
-this.full=function(){
-return a+b
+let person={
+    fname:'naima',
+    lname:'hemed',
+    fullname:function(){
+        return `fname is:${this.fname} and  lastname is :${this.lname}`
+    }
 }
-
+let person1={
+    
 }
-const obj1=new Construct(1,2)
-console.log(obj1.full())
+let person2={
+    fname:'naima',
+    lname:'hemed'
+}
+console.log(person.fullname.call(person2))
 </script>
 
 </body>

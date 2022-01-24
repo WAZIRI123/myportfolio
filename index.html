@@ -14,23 +14,26 @@
 </head>
 <body>
    <!--==================== header & nav start ====================-->
-   <section class="header">
+   <div class="header">
      <div class="header-container">
        <div class="logo"> <p>Waziri Ally</p></div>
        <div class="nav">
         <ul class="nav-wrapper">
-          <li class='nav-link'><a href="#home" class="link active">Home</a></li>
-          <li class='nav-link'><a href="#about" class="link">About</a></li>
-          <li class='nav-link'><a href="#contact-me" class="link">Contact</a></li>
-          <li class='nav-link'><a href="#services-section" class="link">Services</a></li>
-          <li class='nav-link'><a href="#portifolio" class="link">Portifolio</a></li>
-          <li class='nav-link'><a href="#contact-me" class="link">ContactMe</a></li>
+          <li class='nav-link'><a href="#home" class="link active home">Home</a></li>
+          <li class='nav-link'><a href="#about" class="link about">About</a></li>
+          <li class='nav-link'><a href="#skills" class="link skills">skills</a></li>
+          <li class='nav-link'><a href="#services-section" class="link services-section">Services</a></li>
+          <li class='nav-link'><a href="#portifolio" class="link portifolio">Portifolio</a></li>
+          <li class='nav-link'><a href="#contact-me" class="link contact-me">ContactMe</a></li>
         </ul>
         <div class="dark-icon"><i class="uil uil-moon"></i></div>
         <div class="toggle-z"><i class="uil uil-align-justify toggle-bar"></i></div>
        </div>
     </div>
-   </section>
+  </div>
+  <div class="upbtn">
+    <span><i class="uil uil-arrow-up"></i></span>
+  </div>
     <!--==================== header & nav end====================-->
 
  <!--==================== main ====================-->
@@ -282,7 +285,7 @@
   
    <!--==================== SKill sectionEnd ====================-->
     <!--====================Qualification start ====================-->
-    <section class="qualification">
+    <section class="qualification" id="qualification">
       <div class="qual_header">
       <h2>Qualification</h2>
       <p>My Academic Background</p>
@@ -506,7 +509,7 @@
 <!--==================== Services end ====================-->
 
 <!--==================== Portifolio Section start======================-->
-<section class="" id="portifolio">
+<section class="portifolio" id="portifolio">
   <div class="qual_header">
     <h2 class="contact-header"><span>Portifolio</span> </h2>
     <p>Works that i have done so far</p>
@@ -584,13 +587,13 @@
   <form action="https://formspree.io/f/xvolzklw" method="POST" id="my-form">
     <div class="contact-input">
     <div class="name">
-    <input type="text" class="name" placeholder="full-name" name="name">
+    <input type="text" class="name" placeholder="full-name" name="name" required>
   </div>
   <div class="email">
-    <input type="email" class="email" placeholder="Email" name="email">
+    <input type="email" class="email" placeholder="Email" name="email" required>
   </div>
   <div class="message">
-    <textarea name="message" id="" cols="30" rows="10" placeholder="Write Your Message...."></textarea>
+    <textarea name="message" id="" cols="30" rows="10" placeholder="Write Your Message...." required></textarea>
   </div>
   <div class="subutton">
     <input type="submit"  placeholder="">
@@ -604,7 +607,7 @@
 </section>
 <!--==================== contact Section end====================-->
 <!--==================== footer Section start====================-->
-<section class="footer-container">
+<section class="footer-container" id="footer-container">
   <div class="footer-items">
     <div class="logo">
       <img src="asset/img/about.jpg" alt="">
