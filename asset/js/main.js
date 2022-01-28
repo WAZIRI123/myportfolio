@@ -6,17 +6,16 @@ const navMenu=document.getElementById('nav-menu'),
       navwrapper=document.querySelector('.nav-wrapper')
       //--==================== togglebar start ====================--//
       togglebar.addEventListener('click',()=>{
-        navwrapper.classList.toggle('active')
+        if (togglebar.className==='uil uil-align-justify toggle-bar') {
+          togglebar.className="uil uil-times toggle-bar"
+          navwrapper.classList.add('active')
+        }else{
+          togglebar.className="uil uil-align-justify toggle-bar"
+          navwrapper.classList.remove('active')
+        }
+        
       })
-        //--==================== togglebar end ====================--//
-        //--==================== navlinkscroll on click start ====================--//
-        let navlinkscr=document.querySelectorAll('nav-link')
-        navlinkscr.forEach(()=>{
-          navlinkscr.addEventListener(('click',()=>{
-            
-          }))
-        })
-        //--==================== navlinkscroll on click end ====================--//
+        //--==================== togglebar end ====================--/
     /*--====================portifolio section js start ====================--*/
      let container=document.querySelector('.portifolio-container')
      let totalwidth=0;
@@ -28,7 +27,7 @@ const navMenu=document.getElementById('nav-menu'),
   let jumpslipe=0;
      let responsive=[
       {breakpoint:{width:200,items:1}},
-      {breakpoint :{width:300,items:2}},
+      {breakpoint :{width:300,items:1}},
       {breakpoint : {width:768,items:3}},
       {breakpoint : {width:900,items:4}}
      ];
@@ -197,15 +196,13 @@ const navMenu=document.getElementById('nav-menu'),
    window.addEventListener('scroll',(e)=>{
      newvalue=window.pageYOffset;
      if ( oldvalue < newvalue) {
-       headercontainer.style.position="relative"
+       headercontainer.style.top="-80px"
      } 
      else if(newvalue===0){
-      headercontainer.style.position="relative"
-      headercontainer.style.background="red"
+      headercontainer.style.top="0"
      }
      else if(oldvalue > newvalue){
-      headercontainer.style.position="fixed"
-      headercontainer.style.background="hsl(250, 69%, 61%)"
+      headercontainer.style.top="0"
      }
      console.log(newvalue)
      console.log(oldvalue)
@@ -252,7 +249,7 @@ const navMenu=document.getElementById('nav-menu'),
       }
     })
     upbtn.addEventListener('click',()=>{
-      window.location=actualho
+      document.documentElement.scrollTop = 0;
     })
    
    /*=========--======================nscroll -up-arrow edn ====================-================-===-*/

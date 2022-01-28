@@ -9,22 +9,33 @@
 <p id="demo"></p>
 
 <script>
-// Define an object
-let person={
-    fname:'naima',
-    lname:'hemed',
-    fullname:function(){
-        return `fname is:${this.fname} and  lastname is :${this.lname}`
+// Define an objec
+class car{
+    constructor(name,year){
+        this.name=name
+        this.year=year
+    }
+     age() {
+        let date=new Date()
+        let age=date.getFullYear() - this.year
+        return age
     }
 }
-let person1={
-    
+class company extends car{
+    constructor(name,year,brand){
+        super(name,year);
+        this.brand=brand
+    }
+    get carname (){
+        return this.brand
+    }
+    set carname (x){
+        return this.brand=x
+    }
 }
-let person2={
-    fname:'naima',
-    lname:'hemed'
-}
-console.log(person.fullname.call(person2))
+let carObjt=new company('tesla',2000,'new')
+ carObjt.carname='old'
+console.log(carObjt.carname)
 </script>
 
 </body>
