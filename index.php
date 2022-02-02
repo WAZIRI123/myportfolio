@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,9 +94,11 @@
   <!--==================== about section====================-->
   <section class="about section-about" id="about">
     <h2 class="section_title">About Me</h2>
-    <span class="section_subtitle">My Introduction</span>
+    <span class="section_subtitle">Who i am </span>
     <div class="about_container grid">
-      <img src="asset/img/image-for web.jfif" alt="" class="about_img">
+      <div class="imagcore">
+        <img src="asset/img/image-for web.jfif" alt="" class="about_img">
+      </div>
       <div class="about_data">
         <p class="about_description">I am an independent Freelancer with more than 2 years experience 
           in developing a front end and back end website. If you are looking for awesome front end and back end website at affordable prices, then look no further.
@@ -127,10 +130,10 @@
   <!--==================== SKills ====================-->
   <section class="skills section" id="skills">
     <h2 class="section_title">Skills</h2>
-    <span class="section_subtitle">My technical level</span>
+    <span class="section_subtitle">What i know</span>
     <div class="skills_container">
          <!--==================== SKill1 ====================-->
-         <div class="skills_content skills_close">
+         <div class="skills_content skills_open">
            <div class="skills_header"> 
             <i class="uil uil-brackets-curly skills_icon"></i>
            <div>
@@ -296,9 +299,9 @@
       <!--====================Qualification item1====================-->
     <div class="quali_item">
       <div class="quali_desc">
-      <h2>computer Science</h2>
+      <h2>Degree in Information Technology</h2>
       <p>Moshi-University</p>
-      <span><i class="uil uil-clock"></i>2020-2021</span>
+      <span><i class="uil uil-clock"></i>2017-2020</span>
     </div>
     <div class="line_circle">
       <div class="line"></div>
@@ -313,16 +316,16 @@
           <div class="circle"></div>
         </div>
         <div class="quali_desc">
-        <h2>computer Science</h2>
-        <p>Moshi-University</p>
+        <h2>Online Web-developement Course</h2>
+        <p>Free code Camp</p>
         <span><i class="uil uil-clock"></i>2020-2021</span>
       </div>
       </div>
             <!--====================Qualification item3====================-->
     <div class="quali_item">
       <div class="quali_desc">
-      <h2>computer Science</h2>
-      <p>Moshi-University</p>
+      <h2>Ict Workshop</h2>
+      <p>Tanzania Telecommunication Corporation</p>
       <span><i class="uil uil-clock"></i>2020-2021</span>
     </div>
     <div class="line_circle">
@@ -340,17 +343,17 @@
           <div class="circle"></div>
         </div>
         <div class="quali_desc">
-        <h2>computer Science</h2>
-        <p>Moshi-University</p>
-        <span><i class="uil uil-clock"></i>2020-2021</span>
+        <h2>Web Developer</h2>
+        <p>Kilimanjaro Christian Medical Centre</p>
+        <span><i class="uil uil-clock"></i>2020-present</span>
       </div>
       </div>
             <!--====================Qualification item5====================-->
     <div class="quali_item">
       <div class="quali_desc">
-      <h2>computer Science</h2>
-      <p>Moshi-University</p>
-      <span><i class="uil uil-clock"></i>2020-2021</span>
+      <h2>Web Developer</h2>
+      <p>Faraja Foundation</p>
+      <span><i class="uil uil-clock"></i>2020-2020</span>
     </div>
     <div class="line_circle">
       <div class="line"></div>
@@ -364,9 +367,9 @@
           <div class="circle"></div>
         </div>
         <div class="quali_desc">
-        <h2>computer Science</h2>
-        <p>Moshi-University</p>
-        <span><i class="uil uil-clock"></i>2020-2021</span>
+        <h2>ICT Officer</h2>
+        <p>Arafah Seminary</p>
+        <span><i class="uil uil-clock"></i>2018-2019</span>
       </div>
       </div>
     </div>
@@ -399,12 +402,12 @@
             <i class="uil uil-times-circle"></i>
           </div>
           <div class="services-desc">
-          <p>Ui/Ux 1 <br> Designer</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus nihil, </li>
-            <li>pariatur in asperiores voluptatum dolores autem </li>
-            <li> voluptatibus perferendis corporis quibusdam.</li>
-            <li> Eius a voluptatum inventore maxime dolorum eum magnam reiciendis.</li>
+          <p>I will help your  company to  overcome product design challenges by design and plan following for you:</p>
+          <ul class="services-li">
+            <li>Wireframes Design </li>
+            <li>Ux Research</li>
+            <li>UX strategy plan</li>
+            <li> User flows Diagram design.</li>
           </ul>
           </div>
           </div>
@@ -416,7 +419,7 @@
           <i class="uil uil-moneybag"></i>
         </div>
         <div class="services-desc">
-        <p>Ui/Ux <br> Designer</p>
+        <p>Website <br> development</p>
         <span class='more'>view more <i class="uil uil-arrow-right"></i></span>
       </div>
       <div class="service-container-more" id="more-card">
@@ -429,12 +432,12 @@
           <i class="uil uil-times-circle"></i>
         </div>
         <div class="services-desc">
-        <p>Ui/Ux 2 <br> Designer</p>
-        <ul>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus nihil, </li>
-          <li>pariatur in asperiores voluptatum dolores autem </li>
-          <li> voluptatibus perferendis corporis quibusdam.</li>
-          <li> Eius a voluptatum inventore maxime dolorum eum magnam reiciendis.</li>
+        <p>My offerings as Fullstack Web-Developer  are as follows:</p>
+        <ul class="services-li">
+          <li>Fixing any kind of bugs in PHP, html,css Website </li>
+          <li>Upgrading your website to latest technologies </li>
+          <li>Building a new website for your home, office, hospital, shop, etc</li>
+          <li> Cross-browser compatibility fixing</li>
         </ul>
         </div>
         </div>
@@ -446,7 +449,7 @@
         <i class="uil uil-moneybag"></i>
       </div>
       <div class="services-desc">
-      <p>Ui/Ux <br> Designer</p>
+      <p>SEO <br> Search Engine Optimization</p>
       <span class='more'>view more <i class="uil uil-arrow-right"></i></span>
     </div>
     <div class="service-container-more" id="more-card">
@@ -459,53 +462,24 @@
   <i class="uil uil-times-circle"></i>
 </div>
 <div class="services-desc">
-<p>Ui/Ux 3 <br> Designer</p>
-<ul>
-  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus nihil, </li>
-  <li>pariatur in asperiores voluptatum dolores autem </li>
-  <li> voluptatibus perferendis corporis quibusdam.</li>
-  <li> Eius a voluptatum inventore maxime dolorum eum magnam reiciendis.</li>
+<p>My Services Includes:</p>
+<ul class="services-li">
+  <li> In-Depth Keyword Research </li>
+  <li>Meta Tags Optimization </li>
+  <li> Heading Tags Optimization & Image Alt Tags Optimization</li>
+  <li> Basic Technical SE0 Optimization & Google Analytics Integration</li>
 </ul>
 </div>
 </div>
 </div>
   </div>
-   <!--==================== Services card4====================-->
-   <div class="services-card">
-    <div class="services-icon">
-      <i class="uil uil-moneybag"></i>
-    </div>
-    <div class="services-desc">
-    <p>Ui/Ux <br> Designer</p>
-    <span class='more'>view more <i class="uil uil-arrow-right"></i></span>
-  </div>
-  <div class="service-container-more" id="more-card">
-    <!--==================== Services more4====================-->
-    <div class="services-card-more adCard">
-    <div class="services-icon">
-    <i class="uil uil-moneybag"></i>
-    </div>
-    <div class="cancelbtn" id='cancelbtn'>
-      <i class="uil uil-times-circle"></i>
-    </div>
-    <div class="services-desc">
-    <p>Ui/Ux 4 <br> Designer</p>
-    <ul>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus nihil, </li>
-      <li>pariatur in asperiores voluptatum dolores autem </li>
-      <li> voluptatibus perferendis corporis quibusdam.</li>
-      <li> Eius a voluptatum inventore maxime dolorum eum magnam reiciendis.</li>
-    </ul>
-    </div>
-    </div>
-    </div>
 </div>
 </div>
 </section>
 <!--==================== Services end ====================-->
 
 <!--==================== Portifolio Section start======================-->
-<section class="portifolio" id="portifolio">
+<section class="portifolio" section id="portifolio">
   <div class="qual_header">
     <h2 class="contact-header"><span>Portifolio</span> </h2>
     <p>Works that i have done so far</p>
@@ -580,16 +554,17 @@
   <div class="contact-form">
     <h2>Contact Form</h2>
     <div id="my-form-status"></div>
-  <form action="https://formspree.io/f/xvolzklw" method="POST" id="my-form">
+  <form action="" method="POST" id="my-form">
+        
     <div class="contact-input">
     <div class="name">
-    <input type="text" class="name" placeholder="full-name" name="name" required>
+    <input type="text" class="Head" placeholder="full-name" name="Subject" required>
   </div>
   <div class="email">
     <input type="email" class="email" placeholder="Email" name="email" required>
   </div>
   <div class="message">
-    <textarea name="message" id="" cols="30" rows="10" placeholder="Write Your Message...." required></textarea>
+    <textarea name="Body" id="" cols="30" rows="10" placeholder="Write Your Message...." required></textarea>
   </div>
   <div class="subutton">
     <input type="submit"  placeholder="">

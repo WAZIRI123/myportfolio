@@ -7,15 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+
   <p id="p"></p>
 <script>
-let a= 4
-function byreference(a){
-  a=5;
-  console.log(a)
+async function mydis(){
+  let promis=new Promise(function(resolve,reject) {
+   setTimeout(() => {
+    resolve('inshallah intajakuja kuwa programmmer mkuu tu mungu mkubwa sana')
+   }, 3000);
+    
+  })
+  console.log(await promis)
 }
-byreference(a);
-console.log(a)
+mydis()
 </script>
       
 </body>

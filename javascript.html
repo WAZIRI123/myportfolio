@@ -4,38 +4,34 @@
 
 <h2>JavaScript Getters and Setters</h2>
 
-<p>Perfect for creating counters:</p>
+<p >Perfect for creating counters:</p>
 
 <p id="demo"></p>
 
 <script>
 // Define an objec
-class car{
-    constructor(name,year){
-        this.name=name
-        this.year=year
-    }
-     age() {
-        let date=new Date()
-        let age=date.getFullYear() - this.year
-        return age
-    }
+function mydisplay(params) {
+    document.querySelector('#demo').innerHTML=params
 }
-class company extends car{
-    constructor(name,year,brand){
-        super(name,year);
-        this.brand=brand
+let mypromise=function (callback) {
+    let xhr=new XMLHttpRequest();
+    xhr.open('GET','TEST.txt',true)
+    xhr.onload=function (){
+        if (xhr.status===200) {
+            callback(xhr.responseText)
+        }else{
+            callback('error:'+xhr.status)
+        }
     }
-    get carname (){
-        return this.brand
-    }
-    set carname (x){
-        return this.brand=x
-    }
+    xhr.send()
+
 }
-let carObjt=new company('tesla',2000,'new')
- carObjt.carname='old'
-console.log(carObjt.carname)
+ mypromise(mydisplay)
+
+/*setTimeout(mydisplay,3000)
+function mydisplay() {
+    console.log('i love you')
+}*/
 </script>
 
 </body>

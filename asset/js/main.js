@@ -204,8 +204,6 @@ const navMenu=document.getElementById('nav-menu'),
      else if(oldvalue > newvalue){
       headercontainer.style.top="0"
      }
-     console.log(newvalue)
-     console.log(oldvalue)
      oldvalue=newvalue;
    });
    
@@ -253,8 +251,27 @@ const navMenu=document.getElementById('nav-menu'),
     })
    
    /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
-  
-  
+    /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
+    let imgOption={
+      threshold:1
+    }
+    const about_data=document.querySelector('.about_data')
+    const imagcore=document.querySelector('.about_img')
+    let imgObserver=new IntersectionObserver(function(entries,imgObserver){
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) {
+          entry.target.unObserve
+        }else{
+          entry.target.classList.add('appear')
+          console.log(entry.target)
+        }
+      })
+    },imgOption);
+
+    imgObserver.observe(imagcore)
+    imgObserver.observe(about_data)
+   /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
+ 
   
                
   
