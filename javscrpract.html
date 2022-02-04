@@ -21,6 +21,105 @@ async function mydis(){
 }
 mydis()
 </script>
-      
+/*--============================ ======================  *--==================== *--==================== Qualification ====================--*/
+.title-sub {
+  text-align: center;
+}
+.wor-edu {
+  margin: 1rem;
+  text-align: center;
+}
+.edu {
+  margin: 0.5rem;
+}
+.work {
+  margin: 0.5rem;
+}
+.icon-wor-ed {
+  margin: 0.5rem;
+}
+.work:hover,
+.edu:hover {
+  color: #333333;
+  transform: translate(2);
+  cursor: pointer;
+}
+/*--==================== qualifi-item ====================--*/
+.qual_header {
+  text-align: center;
+  margin: 0.2rem;
+  width: 100%;
+}
+.quali_tabs {
+  text-align: center;
+  margin-bottom: 1.7rem;
+}
+
+.tab_item {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+.quali_section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.work_tab {
+  margin: 0 1.5rem;
+}
+.work_tab:hover {
+  cursor: pointer;
+  color: var(--first-color);
+}
+.educ_tab {
+  margin: 0 1.5rem;
+}
+.educ_tab:hover {
+  cursor: pointer;
+  color: var(--first-color);
+}
+.quali_item {
+  display: grid;
+  grid-template-columns: minmax(10rem,20rem) 100px minmax(10rem,20rem);
+  justify-items: center;
+  column-gap: 0.1rem;
+  width: 100%;
+  
+}
+.line_circle {
+  position: relative;
+  padding: 2rem;
+}
+.quali_desc{
+  width: 100%;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background-color: blue;
+  transform: translate(-40%, -100%);
+}
+
+.line {
+  width: 0.15rem;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  height: 100%;
+  background-color: blue;
+  transform: translate(20%, -30%);
+}
+.inactive {
+  display: none;
+}
+.tabcolor {
+  color: blue;
+}
 </body>
 </html>

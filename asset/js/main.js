@@ -182,10 +182,14 @@ const navMenu=document.getElementById('nav-menu'),
     const work_qualification=document.querySelector('.work_qualification')
      educ_tab.addEventListener('click',()=>{
       education_qualification.classList.toggle('inactive')
+      work_tab.classList.remove('tab-active')
+      educ_tab.classList.toggle('tab-active')
        work_qualification.classList.add('inactive')
     })
      work_tab.addEventListener('click',()=>{
       work_qualification.classList.toggle('inactive')
+      work_tab.classList.toggle('tab-active')
+      educ_tab.classList.remove('tab-active')
       education_qualification.classList.add('inactive')
      })
       /*-===========-====================education and work experience  end =======================--=*/
@@ -253,7 +257,7 @@ const navMenu=document.getElementById('nav-menu'),
    /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
     /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
     let imgOption={
-      threshold:1
+      threshold:0.2
     }
     const about_data=document.querySelector('.about_data')
     const imagcore=document.querySelector('.about_img')
@@ -271,8 +275,9 @@ const navMenu=document.getElementById('nav-menu'),
     imgObserver.observe(imagcore)
     imgObserver.observe(about_data)
    /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
- 
-  
+
+
+
                
   
       

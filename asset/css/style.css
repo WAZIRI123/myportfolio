@@ -63,7 +63,7 @@ html {
   scroll-behavior: smooth;
 }
 html, body {
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 body {
   font-family: var(--body-font);
@@ -532,7 +532,16 @@ text-align: center;
   transform: translate(2);
   cursor: pointer;
 }
+
 /*--==================== qualifi-item ====================--*/
+.qualification{
+  width: 100%;
+}
+.container-qualification{
+display: flex;
+justify-content: center;
+align-items: center;
+}
 .qual_header {
   text-align: center;
   margin: 0.2rem;
@@ -549,8 +558,11 @@ text-align: center;
 }
 .quali_section {
   display: grid;
+  grid-auto-rows: auto;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
 }
 
 .work_tab {
@@ -569,36 +581,42 @@ text-align: center;
 }
 .quali_item {
   display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  column-gap: 0.5rem;
+  grid-template-columns: minmax(5rem,20rem) 100px minmax(5rem,20rem);
+  column-gap: 1rem;
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .line_circle {
-  position: relative;
-  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+}
+.quali_desc{
+  width: 100%;
+  text-align: center;
 }
 .circle {
+  display: inline-block;
   width: 10px;
   height: 10px;
   background-color: blue;
   border-radius: 50%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  background-color: blue;
-  transform: translate(-40%, -100%);
 }
 
 .line {
-  width: 0.15rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: block;
+  width: 0.05rem;
   height: 100%;
-  background-color: blue;
-  transform: translate(20%, -30%);
+  background-color: var(--first-color-alt);
+  transform: translate(5px,-6px);
 }
 .inactive {
   display: none;
+}
+.tab-active{
+  color: var(--first-color);
 }
 .tabcolor {
   color: blue;
