@@ -934,10 +934,12 @@ margin-bottom: 5vh;
 .social-media>a{
   display: block;
   padding: .3vh 0;
+  color: var(--body-color);
 }
 .links>a{
   display: block;
   padding: .3vh 0;
+  color: var(--body-color);
 }
 .social-media>a:hover{
   color: #70a1ff;
