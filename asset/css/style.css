@@ -1053,6 +1053,7 @@ font-weight: var(--font-medium);
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 999;
+
   }
  
   .nav-link>a{
@@ -1214,7 +1215,7 @@ font-weight: var(--font-medium);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:1rem 0;
+    margin: 0;
   }
   .home_content{
     display: grid;
@@ -1231,6 +1232,12 @@ font-weight: var(--font-medium);
      width: 100%;
      text-align: center;
    }
+   .toggle-z{
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+
+  }
    
    .logo{
      width: 100%;
