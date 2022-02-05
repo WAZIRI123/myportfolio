@@ -7,32 +7,18 @@
 <p >Perfect for creating counters:</p>
 
 <p id="demo"></p>
+<form action="" id="form1">
+    <input type="text" name="" id="name" value="Duck">
+    <input type="text" name="" id="lname" value="Duck">
+    <input type="text" name="" id="wife" value="Duck">
+    <input type="submit" name="submit" id="submit">
+</form>
 
 <script>
-// Define an objec
-function mydisplay(params) {
-    document.querySelector('#demo').innerHTML=params
+let form=document.forms['form1']
+for (let i = 0; i < form.length; i++) {
+    const element = form.elements[i].value;
+    console.log(element)
 }
-let mypromise=function (callback) {
-    let xhr=new XMLHttpRequest();
-    xhr.open('GET','TEST.txt',true)
-    xhr.onload=function (){
-        if (xhr.status===200) {
-            callback(xhr.responseText)
-        }else{
-            callback('error:'+xhr.status)
-        }
-    }
-    xhr.send()
-
-}
- mypromise(mydisplay)
-
-/*setTimeout(mydisplay,3000)
-function mydisplay() {
-    console.log('i love you')
-}*/
 </script>
-
-</body>
 </html>

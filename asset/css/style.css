@@ -1313,13 +1313,15 @@ font-weight: var(--font-medium);
     z-index: 999;
   }
   .button{
-    margin: 0;
+    margin-left:1rem;
     width: 100%;
     flex-basis: 10rem;
-    justify-self: center;
     font-size: 100%;
+    padding: 0.8rem;
   }
-
+  .contactbtn{
+    margin-left: 3rem;
+  }
 
 }
 
