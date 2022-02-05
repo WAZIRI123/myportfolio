@@ -833,6 +833,7 @@ padding: 2rem;
   background-color: white;
   padding: 0 10px;
 }
+
 .contact-form{
   margin-bottom: 5rem;
 }
@@ -932,6 +933,9 @@ margin-bottom: 5vh;
   padding: 4vh;
   flex-wrap: wrap;
   gap: 2vw;
+}
+.social-media{
+  justify-self: center;
 }
 .social-media>a{
   display: block;
@@ -1221,6 +1225,11 @@ font-weight: var(--font-medium);
     align-items: center;
     margin: 0;
   }
+  .links{
+    position: relative;
+    left: 8%;
+    transform: translateX(-50);
+   }
   .home_content{
     display: grid;
     grid-template-columns:0.5fr 1fr 1fr;
@@ -1277,7 +1286,7 @@ font-weight: var(--font-medium);
     border-bottom: 1px solid rgba(3, 3, 3, 0.7);
     line-height: 0.1rem;
     width: 100%;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
   .services-card {
     width: 100vw;
