@@ -214,7 +214,7 @@ img {
   position: fixed;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 99999;
 }
 .upbtn.active:hover{
   cursor: pointer;
@@ -773,6 +773,9 @@ padding: 2rem;
   margin-top: 1rem;
   font-size: 1rem;
   padding: 1rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .button-port >i{
   font-size: 1.2rem;
@@ -809,7 +812,6 @@ padding: 2rem;
   }
   .controli:hover{
     cursor: pointer;
-    
   }
 /*--==================== portifolio section end ====================--*/
 
