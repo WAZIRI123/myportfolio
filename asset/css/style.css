@@ -750,6 +750,12 @@ padding: 2rem;
   height: 40%;
   padding-left: 0.8rem;
 }
+.item>.img:hover{
+ scale: 2;
+ transform: scale(1.2);
+ cursor: pointer;
+}
+
 .item>h3{
   text-align: start;
   padding-top: 1rem;
@@ -757,7 +763,8 @@ padding: 2rem;
   height: 10%;
 }
 .item>p{
-  text-align: justify;
+  text-align: left;
+  white-space: normal;
   width:100%;
 }
 .item>.img>img{
@@ -774,7 +781,7 @@ padding: 2rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
   width: 10rem;
-  margin-top: 1rem;
+  margin-top: 0rem;
   font-size: 1rem;
   padding: 1rem;
   position: relative;
