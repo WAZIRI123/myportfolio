@@ -7,7 +7,7 @@
 <p >Perfect for creating counters:</p>
 
 <p id="demo"></p>
-<form action="" id="form1">
+<form action="" id="form1" onsubmit="return validate()">
     <input type="text" name="" id="name" value="Duck">
     <input type="text" name="" id="lname" value="Duck">
     <input type="text" name="" id="wife" value="Duck">
@@ -15,10 +15,14 @@
 </form>
 
 <script>
-let form=document.forms['form1']
-for (let i = 0; i < form.length; i++) {
-    const element = form.elements[i].value;
-    console.log(element)
+    function validate() {
+let form=document.forms['form1']['name'].value
+text='';
+if (form=='') {
+    alert('enter value please')
+    return invalide;
 }
+    }
+
 </script>
 </html>
