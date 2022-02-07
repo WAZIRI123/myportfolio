@@ -267,6 +267,7 @@ const navMenu=document.getElementById('nav-menu'),
           entry.target.unObserve
         }else{
           entry.target.classList.add('appear')
+          counting();
           console.log(entry.target)
         }
       })
@@ -274,7 +275,30 @@ const navMenu=document.getElementById('nav-menu'),
 
     imgObserver.observe(imagcore)
     imgObserver.observe(about_data)
-   /*=========--======================nscroll -up-arrow edn ====================-================-===-*/
+   /*=========--======================nscroll -up-arrow edn ====================-================-===-*///about_info-title
+     /*=========--======================counter ====================-================-===-*/
+     function counting() {
+      const counter=document.querySelectorAll('.about_info-title')
+      const speed=300000000;
+      counter.forEach(counters => {
+        const updateCounter=()=>{
+          const totalCounter=+counters.getAttribute('data-target')
+          let current=+counters.innerText
+          console.log(current)
+          let countSpeed=totalCounter/speed;
+          if (current<totalCounter) {
+           counters.innerText=Math.ceil(countSpeed+current)
+           setTimeout(updateCounter,100)
+          }
+         else{
+           counters.innerText=totalCounter +"+"
+         }
+        }
+        updateCounter()
+      });
+     }
+    
+       /*=========--======================counter ====================-================-===-*/
 
 
 

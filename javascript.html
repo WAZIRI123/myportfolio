@@ -18,9 +18,9 @@
     function validate() {
 let form=document.forms['form1']['name'].value
 text='';
-if (form=='') {
+if (form=='' ||form==null) {
     alert('enter value please')
-    return invalide;
+    return false;
 }
     }
 
