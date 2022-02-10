@@ -234,6 +234,31 @@ img {
 .home_img{
   order:1;
   width: 20rem;
+  position: relative;
+}
+.dotsvg{
+  position: absolute;
+  top: -24%;
+  left: -35%;
+  z-index: -9;
+  right: 0;
+}
+.dotsvg svg{
+  color: #F9F871;
+  width: 40%;
+  }
+.dotsvgs{
+  position: absolute;
+  top: -70%;
+  font-size: 1rem;
+  left: -70%;
+  z-index: -9;
+  margin-right:1rem ;
+  right: 0;
+}
+.dotsvgs svg{
+color: #F9F871;
+width: 20%;
 }
 .home_social{
   display: flex;

@@ -29,7 +29,7 @@ const navMenu=document.getElementById('nav-menu'),
       {breakpoint:{width:200,items:1}},
       {breakpoint :{width:300,items:1}},
       {breakpoint : {width:768,items:3}},
-      {breakpoint : {width:900,items:4}}
+      {breakpoint : {width:900,items:3}}
      ];
      function load() {
       for (let i = 0; i<responsive.length; i++) {

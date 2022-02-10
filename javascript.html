@@ -1,28 +1,41 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 900px;
+            overflow: hidden;
+            position: relative;
+        }
+        #animate{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body onclick="imgschang()">
+    <h2 id="h2"></h2>
 
-<h2>JavaScript Getters and Setters</h2>
+<p onclick="myMove()">button</p>
 
-<p >Perfect for creating counters:</p>
-
-<p id="demo"></p>
-<form action="" id="form1" onsubmit="return validate()">
-    <input type="text" name="" id="name" value="Duck">
-    <input type="text" name="" id="lname" value="Duck">
-    <input type="text" name="" id="wife" value="Duck">
-    <input type="submit" name="submit" id="submit">
-</form>
+ <div class="container">
+     <div >
+<img src="" alt="" srcset="" id="animate">
+     </div>
+ </div>
 
 <script>
-    function validate() {
-let form=document.forms['form1']['name'].value
-text='';
-if (form=='' ||form==null) {
-    alert('enter value please')
-    return false;
+let animatee=document.querySelector('#animate')
+function imgschang(){
+    animatee.src='asset/img/about.jpg'
 }
-    }
-
 </script>
+</body>
 </html>
